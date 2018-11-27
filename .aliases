@@ -12,8 +12,11 @@ alias -- -="cd -"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias w="cd ~/Workspace"
 alias g="git"
+
+alias dot::edit='cd ~/Workspace/dotfiles && git pull origin master && code .'
+alias dot::reload='cd ~/Workspace/dotfiles && git push origin master && bash bootstrap.sh'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
